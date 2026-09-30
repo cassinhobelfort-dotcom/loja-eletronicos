@@ -1,0 +1,4 @@
+br/com/senai/loja_eletronicos/LojaEletronicosApplication.class
+br/com/senai/loja_eletronicos/model/Produto.class
+br/com/senai/loja_eletronicos/repository/ProdutoRepository.class
+br/com/senai/loja_eletronicos/controller/ProdutoController.class

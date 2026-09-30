@@ -1,0 +1,4 @@
+/workspaces/loja-eletronicos/src/main/java/br/com/senai/loja_eletronicos/LojaEletronicosApplication.java
+/workspaces/loja-eletronicos/src/main/java/br/com/senai/loja_eletronicos/controller/ProdutoController.java
+/workspaces/loja-eletronicos/src/main/java/br/com/senai/loja_eletronicos/model/Produto.java
+/workspaces/loja-eletronicos/src/main/java/br/com/senai/loja_eletronicos/repository/ProdutoRepository.java
