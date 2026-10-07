@@ -1,0 +1,33 @@
+### 1. Listar todos os produtos (GET)
+GET http://localhost:8080/api/produtos
+
+### 2. Buscar produto por ID (GET) - Trazendo o produto de ID 1
+GET http://localhost:8080/api/produtos/1
+
+### 3. Criar um novo produto (POST)
+POST http://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Placa de Vídeo RTX",
+  "descricao": "Hardware para alta performance",
+  "preco": 3500.00,
+  "quantidadeEstoque": 4
+}
+
+### 4. Atualizar um produto existente (PUT) - Modificando o produto de ID 1
+PUT http://localhost:8080/api/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Motorola Moto G86 Atualizado",
+  "descricao": "Preço ajustado no sistema",
+  "preco": 1399.00,
+  "quantidadeEstoque": 15
+}
+
+### 5. Deletar um produto (DELETE) - Excluindo o produto de ID 2
+DELETE http://localhost:8080/api/produtos/2
+
+### 6. Testar Integração Externa (ViaCEP) - Substitua pelo seu CEP se quiser
+GET http://localhost:8080/api/cep/48902515
