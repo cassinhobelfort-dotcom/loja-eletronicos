@@ -1,7 +1,7 @@
-package com.loja.eletronicos.controller;
+package br.com.senai.loja_eletronicos.controller;
 
-import com.loja.eletronicos.model.Produto;
-import com.loja.eletronicos.repository.ProdutoRepository;
+import br.com.senai.loja_eletronicos.model.Produto;
+import br.com.senai.loja_eletronicos.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
