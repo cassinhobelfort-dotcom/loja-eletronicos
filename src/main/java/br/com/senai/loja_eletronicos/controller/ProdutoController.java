@@ -37,4 +37,13 @@ public class ProdutoController {
         produtoRepository.deleteById(id);
         return "redirect:/catalogo";
     }
+
+    // Carregar dados para edição
+    @GetMapping("/produtos/editar/{id}")
+    public String carregarParaEditar(@PathVariable("id") Long id, Model model) {
+        Produto produtoParaEditar = produtoRepository.findById(id).orElse(new Produto());
+        model.addAttribute("novoProduto", produtoParaEditar);
+        model.addAttribute("produtos", produtoRepository.findAll());
+        return "catalogo";
+    }
 }
