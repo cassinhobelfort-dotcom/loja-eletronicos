@@ -46,4 +46,9 @@ public class ProdutoController {
         model.addAttribute("produtos", produtoRepository.findAll());
         return "catalogo";
     }
+
+    @GetMapping("/")
+public String home() {
+    return "index";
+}
 }
