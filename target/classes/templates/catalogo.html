@@ -8,6 +8,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
+<style>
+    /* Linhas horizontais bem marcadas e visíveis entre os produtos */
+    .table tbody tr td {
+        border-top: 1.5px solid #b0b8c1 !important;
+        border-bottom: 1.5px solid #b0b8c1 !important;
+    }
+    
+    /* Remove bordas verticais para manter o estilo clean */
+    .table tbody tr td, .table thead tr th {
+        border-left: none !important;
+        border-right: none !important;
+    }
+</style>
 <body class="bg-light">
 
     <!-- Navbar -->
@@ -35,7 +48,7 @@
         <div class="card shadow-sm border-0">
             <div class="card-body p-0">
                 <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover align-middle">
+                    <table class="table table-striped table-hover align-middle mb-0">
                         <thead class="table-dark">
                             <tr>
                                 <th>ID</th>

@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
+    <style>
+    /* Estilo para a seção principal (Hero) da página inicial */
+    .hero-section {
+        /* Adiciona a imagem de fundo com uma camada escura para o texto ficar legível */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/fundo-tech.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        /* Define a altura e o alinhamento centralizado do conteúdo */
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white; /* Cor do texto clara para contraste */
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Eletrônicos Tech</title>
@@ -19,13 +37,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="container my-auto py-5 text-center">
+   <!-- Hero Section -->
+<div class="container-fluid hero-section-bg py-5 text-center">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8">
+            <div class="col-lg-8 text-white">
                 <i class="bi bi-shop display-1 text-primary mb-3"></i>
                 <h1 class="display-4 fw-bold mb-3">Bem-vindo à Loja de Eletrônicos Tech</h1>
-                <p class="lead text-muted mb-4">
+                <p class="lead text-light mb-4">
                     Gerencie seu inventário de produtos, controle estoque e acesse o catálogo completo em tempo real.
                 </p>
                 <a href="/catalogo" class="btn btn-primary btn-lg px-4 shadow">
@@ -34,6 +53,7 @@
             </div>
         </div>
     </div>
+</div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3 mt-auto">
