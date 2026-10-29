@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
-    <style>
-    /* Estilo para a seção principal (Hero) da página inicial */
-    .hero-section {
-        /* Adiciona a imagem de fundo com uma camada escura para o texto ficar legível */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/fundo-tech.jpg');
+<style>
+    .hero-section-bg {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/fundo-tech.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        
-        /* Define a altura e o alinhamento centralizado do conteúdo */
-        min-height: 80vh;
+        /* Altere para 85vh ou calc(100vh - 120px) para ocupar a tela toda */
+        min-height: calc(100vh - 110px); 
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        color: white; /* Cor do texto clara para contraste */
     }
 </style>
     <meta charset="UTF-8">
