@@ -11,25 +11,27 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     private String nome;
     private String descricao;
     private Double preco;
     private Integer quantidadeEstoque;
+    private String imagemUrl; // Novo campo para a imagem
 
-    // Construtor vazio (obrigatório para o JPA / Hibernate funcionar corretamente)
+    // Construtor vazio (obrigatório para o JPA)
     public Produto() {
     }
 
-    // Construtor com os parâmetros para popular os dados facilmente
-    public Produto(String nome, String descricao, Double preco, Integer quantidadeEstoque) {
+    // Construtor completo com imagem
+    public Produto(String nome, String descricao, Double preco, Integer quantidadeEstoque, String imagemUrl) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.quantidadeEstoque = quantidadeEstoque;
+        this.imagemUrl = imagemUrl;
     }
 
-    // Métodos Getters e Setters
+    // Getters e Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -44,4 +46,7 @@ public class Produto {
 
     public Integer getQuantidadeEstoque() { return quantidadeEstoque; }
     public void setQuantidadeEstoque(Integer quantidadeEstoque) { this.quantidadeEstoque = quantidadeEstoque; }
+
+    public String getImagemUrl() { return imagemUrl; }
+    public void setImagemUrl(String imagemUrl) { this.imagemUrl = imagemUrl; }
 }

@@ -54,6 +54,7 @@
                         <thead class="table-dark">
                             <tr>
                                 <th>ID</th>
+                                <th>Imagem</th>
                                 <th>Nome</th>
                                 <th>Descrição</th>
                                 <th>Preço (R$)</th>
@@ -62,33 +63,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="produto : ${produtos}">
-                                <td class="fw-bold" th:text="${produto.id}">1</td>
-                                <td th:text="${produto.nome}">Nome do Produto</td>
-                                <td th:text="${produto.descricao}">Descrição do Produto</td>
-                                <td class="text-success fw-bold" th:text="${'R$ ' + #numbers.formatDecimal(produto.preco, 1, 2)}">R$ 0,00</td>
-                                <td>
-                                    <span class="badge bg-success rounded-pill px-3 py-2" th:text="${produto.quantidadeEstoque + ' un'}">10 un</span>
-                                </td>
-                                <td class="text-center">
-    <!-- Botão de Editar (Adicionar AQUI) -->
-    <a th:href="@{/produtos/editar/{id}(id=${produto.id})}" 
-       class="btn btn-outline-primary btn-sm me-1">
-       <i class="bi bi-pencil-square me-1"></i>Editar
-    </a>
-
-    <!-- Botão de Excluir -->
-    <a th:href="@{/produtos/excluir/{id}(id=${produto.id})}" 
-       class="btn btn-outline-danger btn-sm" 
-       onclick="return confirm('Tem a certeza de que deseja eliminar este produto?');">
-       <i class="bi bi-trash me-1"></i>Excluir
-    </a>
-</td>
-                            </tr>
-                            <tr th:if="${#lists.isEmpty(produtos)}">
-                                <td colspan="6" class="text-center py-4 text-muted">Nenhum produto cadastrado até o momento.</td>
-                            </tr>
-                        </tbody>
+    <tr th:each="produto : ${produtos}">
+        <td class="fw-bold" th:text="${produto.id}">1</td>
+        
+        <!-- Adicionar esta célula da imagem -->
+        <td class="text-center">
+            <img th:src="${produto.imagemUrl}" alt="Foto" style="width: 65px; height: 65px; object-fit: cover;" class="rounded shadow-sm">
+        </td>
+        
+        <td th:text="${produto.nome}">Nome do Produto</td>
+        <td th:text="${produto.descricao}">Descrição do Produto</td>
+        <td class="text-success fw-bold" th:text="${'R$ ' + #numbers.formatDecimal(produto.preco, 1, 2)}">R$ 0,00</td>
+        <td>
+            <span class="badge bg-success rounded-pill px-3 py-2" th:text="${produto.quantidadeEstoque + ' un'}">10 un</span>
+        </td>
+        <td class="text-center">
+            <!-- Botão de Editar -->
+            <a th:href="@{/produtos/editar/{id}(id=${produto.id})}"
+               class="btn btn-outline-primary btn-sm me-1">
+                <i class="bi bi-pencil-square me-1"></i>Editar
+            </a>
+            <!-- Botão de Excluir -->
+            <a th:href="@{/produtos/excluir/{id}(id=${produto.id})}"
+               class="btn btn-outline-danger btn-sm"
+               onclick="return confirm('Tem a certeza de que deseja eliminar este produto?');">
+                <i class="bi bi-trash me-1"></i>Excluir
+            </a>
+        </td>
+    </tr>
+</tbody>
                     </table>
                 </div>
             </div>
