@@ -17,6 +17,18 @@ public class Produto {
     private Double preco;
     private Integer quantidadeEstoque;
 
+    // Construtor vazio (obrigatório para o JPA / Hibernate funcionar corretamente)
+    public Produto() {
+    }
+
+    // Construtor com os parâmetros para popular os dados facilmente
+    public Produto(String nome, String descricao, Double preco, Integer quantidadeEstoque) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+
     // Métodos Getters e Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
