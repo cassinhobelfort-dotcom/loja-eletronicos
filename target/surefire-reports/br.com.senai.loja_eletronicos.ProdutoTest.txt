@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: br.com.senai.loja_eletronicos.ProdutoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! -- in br.com.senai.loja_eletronicos.ProdutoTest
+br.com.senai.loja_eletronicos.ProdutoTest.deveCriarProdutoComConstrutorEAtributosCorretos -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The declared package "br.com.senai.loja_eletronicos.model" does not match the expected package "br.com.senai.loja_eletronicos"
+	Produto cannot be resolved to a type
+	Produto cannot be resolved to a type
+
+	at br.com.senai.loja_eletronicos.ProdutoTest.<init>(ProdutoTest.java:1)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

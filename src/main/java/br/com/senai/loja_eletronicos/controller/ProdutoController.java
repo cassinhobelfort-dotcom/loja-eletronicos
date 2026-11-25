@@ -46,6 +46,21 @@ public class ProdutoController {
         model.addAttribute("produtos", produtoRepository.findAll());
         return "catalogo";
     }
+    // Busca de produto
+    @GetMapping("/catalogo")
+    public String listarCatalogo(
+        @RequestParam(name = "busca", required = false) String busca,
+        Model model) {
+        List<Produto> produtos;
+        if(busca != null && !busca.isBlank()) {
+            produtos = produtoRepository.findByNomeContainingIgnoreCase(busca.trim());        
+        } else {
+            produtos = produtoRepository.findAll();
+        }
+        model.addAttribute("produtos", produtos);
+        model.addAttribute("busca", busca);
+        return "catalogo";
+    }
 
     @GetMapping("/")
 public String home() {

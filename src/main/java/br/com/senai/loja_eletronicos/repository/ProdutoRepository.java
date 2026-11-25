@@ -1,10 +1,11 @@
 package br.com.senai.loja_eletronicos.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
 import br.com.senai.loja_eletronicos.model.Produto;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
+import java.util.List;
+
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {
+
+    List<Produto> findByNomeContainingIgnoreCase(String nome);
 }
