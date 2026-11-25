@@ -22,7 +22,7 @@ Content-Type: application/json
 {
   "nome": "Motorola Moto G86 Atualizado",
   "descricao": "Preço ajustado no sistema",
-  "preco": 1399.00,
+  "preco": 1499.00,
   "quantidadeEstoque": 15
 }
 
