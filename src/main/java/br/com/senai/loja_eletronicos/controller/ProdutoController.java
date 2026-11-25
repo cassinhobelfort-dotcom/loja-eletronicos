@@ -15,14 +15,6 @@ public class ProdutoController {
     @Autowired
     private ProdutoRepository produtoRepository;
 
-    // Listar catálogo
-    @GetMapping("/catalogo")
-    public String listarCatalogo(Model model) {
-        List<Produto> produtos = produtoRepository.findAll();
-        model.addAttribute("produtos", produtos);
-        model.addAttribute("novoProduto", new Produto());
-        return "catalogo";
-    }
 
     // Salvar ou Atualizar produto
     @PostMapping("/produtos/salvar")
@@ -57,8 +49,10 @@ public class ProdutoController {
         } else {
             produtos = produtoRepository.findAll();
         }
+        
         model.addAttribute("produtos", produtos);
         model.addAttribute("busca", busca);
+        model.addAttribute("novoProduto", new Produto());
         return "catalogo";
     }
 
